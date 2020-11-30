@@ -12,11 +12,11 @@ namespace DevTeamsProject
 
         public string Name { get; set; }
 
-        public int HasPluralsiteAccess { get; set; }
+        public bool HasPluralsiteAccess { get; set; }
 
-        public Developer() { }
+        public Developer() { } //Allows me to instantiate a blank/generic Developer
 
-        public Developer(int id, string name, int hasPluralsightAccess)
+        public Developer(int id, string name, bool hasPluralsightAccess) //Allow explicit instantiantion/construction
         {
             Id = id;
             Name = name;
