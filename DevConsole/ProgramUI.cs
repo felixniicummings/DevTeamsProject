@@ -86,23 +86,52 @@ namespace DevConsole
 
             //ID
             Console.WriteLine("Enter Developer ID ");
-            //newDeveloper.Id = Console.ReadLine();
+            string idAsString = Console.ReadLine();
+            newDeveloper.Id = int.Parse(idAsString);
+            
             //Developer Name
             Console.WriteLine("Enter Developer Name ");
             newDeveloper.Name = Console.ReadLine();
+
+            //Save all inputs to a list 
+            _developerRepo.AddDeveloperToList(newDeveloper);
         }
 
         //View all content
+       
 
         // View Content By Title
         public void DisplayAllDevelopers()
         {
+            Console.Clear();
+            List<Developer> listOfDevelopers = _developerRepo.GetDevelopers();
 
+            foreach(Developer developer in listOfDevelopers)
+            {
+                Console.WriteLine(developer);
+            }
         }
 
         // Update Existing Content
         public void DisplayDevelopersByID()
         {
+            Console.Clear();
+            //Get Developer ID from User
+            Console.WriteLine("Please Enter Developer ID Number ");
+
+            //Get the user's imput
+            string devIdString = Console.ReadLine();
+            int devIdInt = int.Parse(devIdString);
+
+            //Find the developer
+            Developer developer = _developerRepo.GetDeveloperById(devIdInt);
+
+            //Display actaul developers if not null
+            if (developer != null)
+            {
+
+            }
+
 
         }
 

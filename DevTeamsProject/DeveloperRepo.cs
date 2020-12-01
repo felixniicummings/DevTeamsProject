@@ -79,5 +79,12 @@ namespace DevTeamsProject
 
             return null;
         }
+
+        // Get all Developers without Pluralsight Access
+        /*public List<Developer> GetDeveloperWithoutPlurasightAccess(Developer)
+        {
+            if(Develop) { }
+        }
+        */
     }
 }
